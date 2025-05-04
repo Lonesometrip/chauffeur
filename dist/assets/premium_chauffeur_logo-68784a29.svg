@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#FFC107" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+    <filter id="inner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+      <feOffset dx="0" dy="0" result="offsetBlur" />
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over" />
+    </filter>
+    <filter id="bevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant="1" specularExponent="20" lighting-color="#FFFFFF" result="specOut">
+        <fePointLight x="50" y="50" z="100" />
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceGraphic" operator="in" result="specOut" />
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+
+  <!-- Main circular background -->
+  <circle cx="50" cy="50" r="45" fill="url(#gold-gradient)" filter="url(#shadow)" />
+
+  <!-- Steering wheel outer ring -->
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#FFF" stroke-width="4" filter="url(#bevel)" />
+
+  <!-- Steering wheel inner details -->
+  <circle cx="50" cy="50" r="10" fill="#FFF" filter="url(#inner-shadow)" />
+
+  <!-- Steering wheel spokes -->
+  <line x1="50" y1="15" x2="50" y2="40" stroke="#FFF" stroke-width="4" stroke-linecap="round" filter="url(#bevel)" />
+  <line x1="50" y1="60" x2="50" y2="85" stroke="#FFF" stroke-width="4" stroke-linecap="round" filter="url(#bevel)" />
+  <line x1="15" y1="50" x2="40" y2="50" stroke="#FFF" stroke-width="4" stroke-linecap="round" filter="url(#bevel)" />
+  <line x1="60" y1="50" x2="85" y2="50" stroke="#FFF" stroke-width="4" stroke-linecap="round" filter="url(#bevel)" />
+
+  <!-- PC initials in the center -->
+  <text x="50" y="54" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#D4AF37" filter="url(#shadow)">PC</text>
+</svg>
