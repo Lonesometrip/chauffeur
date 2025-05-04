@@ -3,5 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',  // This will be overridden by GitHub Pages with your custom domain
+  base: '/chauffeur/',  // Use repository name for GitHub Pages
+  build: {
+    assetsInlineLimit: 0, // Ensure all assets are processed as files
+  },
 });

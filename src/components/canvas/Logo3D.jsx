@@ -7,7 +7,7 @@ const LogoModel = () => {
   const meshRef = useRef();
   const frontRef = useRef();
   const backRef = useRef();
-  const texture = useTexture("/src/assets/premium_chauffeur_logo.svg");
+  const texture = useTexture("../assets/premium_chauffeur_logo.svg");
 
   useFrame(() => {
     if (meshRef.current) {
