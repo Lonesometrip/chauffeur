@@ -4,7 +4,9 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const ComputerModel = ({ isMobile }) => {
-  const { scene } = useGLTF("./car1/scene.gltf");
+  // Use import.meta.env.BASE_URL to get the correct base path in production
+  const modelPath = import.meta.env.BASE_URL + "car1/scene.gltf";
+  const { scene } = useGLTF(modelPath);
 
   // Make the model interactive
   scene.traverse((child) => {
