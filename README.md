@@ -1,20 +1,19 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Portfolio%20Website%20V2&fontSize=80&animation=fadeIn&fontAlignY=35)
+# Premium Chauffeur Website
 
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#demo">Demo</a> •
-  <a href="#screenshots">Screenshots</a> •
   <a href="#installation">Installation</a> •
+  <a href="#deployment">Deployment</a> •
   <a href="#tech-stack">Tech Stack</a>
 </p>
 
-[![GitHub license](https://img.shields.io/github/license/lohitkolluri/Portfolio?style=flat-square)](LICENSE)
-[![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fportfolio-lohit.vercel.app)](https://portfolio-lohit.vercel.app)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?style=flat-square&logo=react)](https://reactjs.org)
+[![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwww.premium-chauffeur.de)](https://www.premium-chauffeur.de)
 
-<p align="center">A modern, responsive portfolio website showcasing professional experience, projects, and skills. Built with React, Vite, and Tailwind CSS, featuring smooth animations and interactive 3D elements. ✨</p>
+<p align="center">A modern, responsive website for Premium Chauffeur services. Built with React, Vite, and Tailwind CSS, featuring smooth animations and interactive 3D elements. ✨</p>
 
 </div>
 
@@ -47,20 +46,20 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://portfolio-lohit.vercel.app)
+Experience the live website at [https://www.premium-chauffeur.de](https://www.premium-chauffeur.de)
 
 ## 🛠️ Installation
 
 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/lohitkolluri/Portfolio-Website
+git clone https://github.com/lonesometrip/chauffeur.git
 ```
 
 2️⃣ Navigate to project directory:
 
 ```bash
-cd Portfolio-Website
+cd chauffeur
 ```
 
 3️⃣ Install dependencies:
@@ -77,9 +76,11 @@ npm run dev
 
 5️⃣ Open in browser:
 
-- Visit [http://localhost:3000](http://localhost:3000)
+- Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal)
 
-## 🚀 Deployment to GitHub Pages
+## 🚀 Deployment
+
+### GitHub Pages Deployment
 
 1️⃣ Install the GitHub Pages package:
 
@@ -115,6 +116,43 @@ npm run deploy
 - Navigate to Settings > Pages
 - Under "Custom domain", enter your domain name
 - Save and wait for DNS propagation
+
+### Manual Deployment
+
+If you're having issues with the GitHub Pages package, you can deploy manually:
+
+1️⃣ Build the project:
+
+```bash
+npm run build
+```
+
+2️⃣ Commit and push your changes:
+
+```bash
+git add .
+git commit -m "Update website"
+git push origin main
+```
+
+3️⃣ Configure GitHub Pages in repository settings:
+- Go to your repository on GitHub
+- Navigate to Settings > Pages
+- Set the source to the branch you want to deploy (usually main or gh-pages)
+- Set the folder to /docs or /dist (depending on your build configuration)
+- Add your custom domain www.premium-chauffeur.de
+- Save and wait for DNS propagation
+
+### DNS Configuration
+
+To set up your custom domain with GitHub Pages:
+
+1️⃣ Add these records to your DNS configuration:
+- A record: @ → 185.199.108.153
+- A record: @ → 185.199.109.153
+- A record: @ → 185.199.110.153
+- A record: @ → 185.199.111.153
+- CNAME record: www → yourusername.github.io
 
 ## 💻 Tech Stack
 
@@ -167,8 +205,6 @@ npm run deploy
 
 <div align="center">
 
-MIT License © [Lohit Kolluri](LICENSE)
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+All Rights Reserved © Premium Chauffeur
 
 </div>

@@ -2,12 +2,14 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import { logo } from "../../assets"; // Import logo from assets index
 
 const LogoModel = () => {
   const meshRef = useRef();
   const frontRef = useRef();
   const backRef = useRef();
-  const texture = useTexture("../assets/premium_chauffeur_logo.svg");
+  // Use the imported logo instead of direct path
+  const texture = useTexture(logo);
 
   useFrame(() => {
     if (meshRef.current) {
